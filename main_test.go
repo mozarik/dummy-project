@@ -96,6 +96,7 @@ func TestGenerateHeaderXLSX(t *testing.T) {
 	for k, v := range ExcelMappingCell {
 		xlxs.SetCellValue(sheet1Name, k, v)
 	}
+	// Delete BookUpdate.xlsx first
 	err = xlxs.SaveAs("BookUpdate.xlsx")
 	if err != nil {
 		t.Error(err)
